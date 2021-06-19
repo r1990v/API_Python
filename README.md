@@ -11,10 +11,10 @@ def executeapitest(temp1, temp2, temp3, iterations):
 
     for i in range(1, iterations+1):
         print("Iteration: "+str(i))
-        logonurl = "http://mo-9d4145d58.mo.sap.corp:6405/biprws/logon/long"
-        logonpayload = {'userName': 'Administrator', 'password': 'Password1', 'auth': 'secEnterprise'}
-        abouturl = "http://mo-9d4145d58.mo.sap.corp:6405/biprws/v1/about"
-        logoffurl = "http://mo-9d4145d58.mo.sap.corp:6405/biprws/logoff"
+        logonurl = "http://${URL}:6405/biprws/logon/long"
+        logonpayload = {'userName': 'Administrator', 'password': '${Password}', 'auth': 'secEnterprise'}
+        abouturl = "http://${URL}:6405/biprws/v1/about"
+        logoffurl = "http://${URL}:6405/biprws/logoff"
 
         # Create a dictionary which will set accept and content-type to json
         jsonheader = {'Accept': 'application/json', 'Content-Type': 'application/json'}
